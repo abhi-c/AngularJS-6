@@ -1,0 +1,23 @@
+<div>
+  <h2>{{title}}</h2>
+  <ul>
+    <li *ngFor="let cource of courses">
+      <p>{{cource.title | lowercase | uppercase}}</p> 
+      <p>{{cource.students}}</p>
+      <p>{{cource.rating}}</p>
+      <p>{{cource.price}}</p>
+      <p>{{cource.releaseDate}}</p>
+    </li>
+  </ul>
+  <div (click)="save($event,'Div1')">
+  <div (click)="save($event,'Div2')">
+    <button class="btn btn-primary" (click)="save($event, 'Button1')" [class.active]="isActive"> Save </button> 
+  </div>
+</div>
+<div>
+  <!-- <input [value]="email" (keyup.enter)="email=$event.target.value; textBoxEvent();" /> -->
+    <input [(ngModel)]="email" (keyup.enter)="textBoxEvent()" />
+</div>
+
+<span class="glyphicon glyphicon-star"></span>
+</div>
