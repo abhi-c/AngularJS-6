@@ -16,6 +16,7 @@
 </div>
 <div>
   <!-- <input [value]="email" (keyup.enter)="email=$event.target.value; textBoxEvent();" /> -->
-    <input [(ngModel)]="email" (keyup.enter)="textBoxEvent()" />
+    <input [style.width]="600" [(ngModel)]="email" (keyup.enter)="textBoxEvent()" />
+    <p>{{ email | titleCase }}</p>
 </div>
 </div>

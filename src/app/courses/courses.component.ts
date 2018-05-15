@@ -10,7 +10,7 @@ export class CoursesComponent implements OnInit {
   title = "List of Courses";
   courses;
   isActive = false;
-  email = "me@me.com";
+  email = "2 way binding and pipe example";
   isFavourite = true;
   constructor(coursesServcie: CoursesService) {
     this.courses = coursesServcie.getCourses();
